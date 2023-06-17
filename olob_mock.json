@@ -1,0 +1,142 @@
+{
+  "uuid": "659015da-c5d4-4a67-a25d-ea7dfb26fa47",
+  "lastMigration": 27,
+  "name": "Olob mock",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "f093fbf6-1794-4d19-ad9d-7006a3ab1e67",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/v1/accountopenings/savingsproduct",
+      "responses": [
+        {
+          "uuid": "4b14725c-e77d-4c9d-acc6-973bd9afeeb7",
+          "body": "[\n  {\n    \"id\": 1,\n    \"atmCard\": true,\n    \"atmCards\": [\n      {\n        \"url\": \"string\"\n      }\n    ],\n    \"name\": \"Card 1\",\n    \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\n    \"benefits\": [\n      \"Bisa nabung buat umroh\",\n      \"Bisa buat paylater\"\n    ],\n    \"risks\": [\n      \"Bonus kagak cair\"\n    ]\n  },\n  {\n    \"id\": 2,\n    \"atmCard\": true,\n    \"atmCards\": [\n      {\n        \"url\": \"string\"\n      }\n    ],\n    \"name\": \"Card 2\",\n    \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\",\n    \"benefits\": [\n      \"BPJS gak lagi diurus HRD\",\n      \"Auto subs showroom JKT48\",\n      \"Mertua gak lagi ngedumel\"\n    ],\n    \"risks\": [\n      \"Rentan jebol\"\n    ]\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "d74d6300-ebe0-4cdc-aabf-d056a6ad394a",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/v1/accountopenings/captcha",
+      "responses": [
+        {
+          "uuid": "13664095-2abd-4f73-b8dd-f2e4e01c770f",
+          "body": "{\n  \"hash\": \"2023-06-17T08:29:20.163Z\",\n  \"image\": \"https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/536.jpg\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "d004dcc3-66b5-43b8-a504-e5c1c175ba58",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/v1/accountopenings/sendotpemail",
+      "responses": [
+        {
+          "uuid": "e4bbf89f-ae80-4ccd-ad10-332b3d152883",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "f093fbf6-1794-4d19-ad9d-7006a3ab1e67"
+    },
+    {
+      "type": "route",
+      "uuid": "d74d6300-ebe0-4cdc-aabf-d056a6ad394a"
+    },
+    {
+      "type": "route",
+      "uuid": "d004dcc3-66b5-43b8-a504-e5c1c175ba58"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
